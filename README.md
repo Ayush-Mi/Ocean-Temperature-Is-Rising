@@ -52,6 +52,8 @@ Later the model was used to forecast the next 90 days of sea surface temperature
 In conclusion, there has been a yearly mean increase of 2 kelvin degrees of temperature in past 4 decades for the Mediterranean Sea. However, further analyses of specific portions of sea surface would help better understand and reason the fulctuations which will aid in taking sustainable actions in preserving marine life.
 
 **In the below graph, ignore the sudden uptick after 2020 which is due the availibility of only 3 months of data year 2024**
+
+
 ![](https://github.com/Ayush-Mi/Ocean-Temperature-Is-Rising/blob/main/img/yearly.png)
 
 ## References
