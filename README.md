@@ -24,8 +24,35 @@ The below description is taken from the overview section of the CMS website for 
 
 ## Analysis
 
+The sea surface temperature for Mediterranean sea seems to follow an yearly cycle where the temperature starts to rise from the month of April up till Septempber and then slowly starts to cool down again as shown in the picture below.
+
+![](https://github.com/Ayush-Mi/Ocean-Temperature-Is-Rising/blob/main/img/fluctuations.png)
+
+
+The same is reflected in the variance and standard deviation of the surface temperature which shows that it fluctuates a lot during this time.
+![](https://github.com/Ayush-Mi/Ocean-Temperature-Is-Rising/blob/main/img/var_std.png)
+
+
+If we look at the monthly distribution of the past 40 years we see on average there is more variability in the month of June which is when the temperature rises more steeply.
+![](https://github.com/Ayush-Mi/Ocean-Temperature-Is-Rising/blob/main/img/monthly.png)
+
 ## Model & Prediction
+
+The model used for the prediction is a simple three layer LSTM model which takes in the data for the past 30 time stamps and predicts the values for the 31st time stamp. It uses mean squared error as the loss function for training the model and achieves a MSE score of 0.0007 in only 10 epochs. The dataset was normalized using the min_max scaler before feeding in to the model. 
+
+It was trained on past approximately 42 years of dataset, that is from 1982 to 2022-23 and tested on one year of data which is 2023-2024. Below is the graph of the predictions.
+![](https://github.com/Ayush-Mi/Ocean-Temperature-Is-Rising/blob/main/img/test.png)
+
+Later the model was used to forecast the next 90 days of sea surface temperature, that is from April 2024 to June 2024 and we see a rise in temperature, as expected:
+
+![](https://github.com/Ayush-Mi/Ocean-Temperature-Is-Rising/blob/main/img/forecast.png)
 
 ## Conclusion & Future Work
 
+In conclusion, there has been a yearly mean increase of 2 kelvin degrees of temperature in past 4 decades for the Mediterranean Sea. However, further analyses of specific portions of sea surface would help better understand and reason the fulctuations which will aid in taking sustainable actions in preserving marine life.
+
+**In the below graph, ignore the sudden uptick after 2020 which is due the availibility of only 3 months of data year 2024**
+![](https://github.com/Ayush-Mi/Ocean-Temperature-Is-Rising/blob/main/img/yearly.png)
+
 ## References
+[Copernicus Marine Service](https://data.marine.copernicus.eu/product/SST_MED_SST_L4_REP_OBSERVATIONS_010_021/description)
